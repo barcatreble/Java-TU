@@ -13,13 +13,13 @@ public class Main {
         for(Employee e : employees){
             System.out.print("Ime: " + e.name);
             System.out.println();
-            System.out.printf("Zaplata: %.2flv\n", e.baseSalary);
+            System.out.printf("Zaplata: %.2flv\n", e.calculateSalary());
             System.out.println();
-            if(e.baseSalary > withBiggestSalary.baseSalary) withBiggestSalary = e;
+            if(e.calculateSalary() > withBiggestSalary.calculateSalary()) withBiggestSalary = e;
         }
 
         System.out.println("Slujitel s nai-golqma zaplata: ");
         System.out.println("Ime: " + withBiggestSalary.name);
-        System.out.printf("Zaplata: %.2flv\n", withBiggestSalary.baseSalary);
+        System.out.printf("Zaplata: %.2flv\n", withBiggestSalary.calculateSalary());
     }
 }

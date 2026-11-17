@@ -35,7 +35,7 @@ public abstract class Starship {
             return false;
         }
 
-        int damageDealt = baseDamage;
+        int damageDealt = attackDamage();
         target.takeDamage(damageDealt);
 
         System.out.println("Targeted starship was successfully attacked!");
